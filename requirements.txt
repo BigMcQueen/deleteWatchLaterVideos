@@ -1,2 +1,0 @@
-selenium==4.8.2
-chromedriver-binary==111.0.5563.64
