@@ -4,9 +4,7 @@ function sleep(ms) {
 
 async function deleteWatchLaterVideos() {
   // Get a list of videos
-  const items = document.querySelectorAll("ytd-playlist-video-renderer");
-
-  console.log(items);
+  const items = document.querySelectorAll("#contents ytd-playlist-video-renderer");
 
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
@@ -14,6 +12,8 @@ async function deleteWatchLaterVideos() {
     // Click on the Kebab Menu in the video
     const dropdownButton = item.querySelector('yt-icon-button.dropdown-trigger > button[aria-label]');
     dropdownButton.click();
+
+    await sleep(1000);
 
     // Click on Delete button
     const deleteButton = document.querySelector("tp-yt-paper-listbox.style-scope.ytd-menu-popup-renderer").children[2];
