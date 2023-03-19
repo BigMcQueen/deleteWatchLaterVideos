@@ -1,10 +1,10 @@
-// Implement the SLEEP function in JavaScript
-function sleep(ms) {
+// Delay function to wait for a specified number of milliseconds
+function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Function to remove a video from the list
-async function deleteWatchLaterVideos() {
+// Function to remove videos from the playlist
+async function deleteWatchLaterVideosFromPlaylist() {
   try {
     // Get a list of videos
     const items = document.querySelectorAll("#contents ytd-playlist-video-renderer");
@@ -17,14 +17,14 @@ async function deleteWatchLaterVideos() {
       dropdownButton.click();
 
       // Wait 100 milliseconds
-      await sleep(1000);
+      await delay(1000);
 
       // Click on Delete button
       const deleteButton = document.querySelector("tp-yt-paper-listbox.style-scope.ytd-menu-popup-renderer").children[2];
       deleteButton.click();
 
       // Wait 100 milliseconds
-      await sleep(1000);
+      await delay(1000);
     }
   } catch (error) {
     console.error(error);
@@ -32,4 +32,4 @@ async function deleteWatchLaterVideos() {
 }
 
 // Perform the function of deleting videos.
-deleteWatchLaterVideos();
+deleteWatchLaterVideosFromPlaylist()
