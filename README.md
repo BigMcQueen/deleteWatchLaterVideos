@@ -23,7 +23,7 @@ https://www.naporitansushi.com/yt-erasure/
 2. YouTubeの「後で見る」を開く。
 3. Chromeデベロッパーツール（検証モード）を起動する。
 4. 「Console」を開く。
-5. このコードをコピー・アンド・ペーストする。
+5. 「main.js」のコードをコピーし、Consoleにペーストする。
 6. Enterキーを押すと実行され、動画が削除され始めます。
 7. 削除が終わるまで待ちます。
  
